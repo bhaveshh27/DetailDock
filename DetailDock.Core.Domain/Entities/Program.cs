@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DetailDock.Infrastructure.DatabaseContext
+namespace DetailDock.Core.Domain.Entities
 {
-    internal class DetailDockDbContext
+    public class Program
     {
     }
 }
