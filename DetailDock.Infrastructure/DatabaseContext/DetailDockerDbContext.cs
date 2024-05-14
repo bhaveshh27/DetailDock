@@ -26,14 +26,14 @@ namespace DetailDock.Infrastructure.DatabaseContext
                     .HasPartitionKey(e => e.Id);
 
 
-            modelBuilder.Entity<BasicInfo>()
+            /*modelBuilder.Entity<BasicInfo>()
                 .ToContainer("PersonalInformation")
                 .HasPartitionKey(c => c.Id);
 
 
             modelBuilder.Entity<QuestionType>()
                 .ToContainer("QuestionType")
-                .HasPartitionKey(c => c.Id);
+                .HasPartitionKey(c => c.Id);*/
         }
 
     }

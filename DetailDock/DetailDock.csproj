@@ -24,8 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="ServiceExtensions\" />
+    <ProjectReference Include="..\DetailDock.Core.Application\DetailDock.Core.Application.csproj" />
+    <ProjectReference Include="..\DetailDock.Infrastructure\DetailDock.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
