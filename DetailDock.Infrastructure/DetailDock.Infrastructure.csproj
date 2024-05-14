@@ -26,4 +26,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DetailDock.Core.Domain\DetailDock.Core.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
