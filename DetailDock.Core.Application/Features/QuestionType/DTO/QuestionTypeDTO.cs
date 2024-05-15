@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DetailDock.Core.Domain.Entities
+namespace DetailDock.Core.Application.Features.QuestionType.DTO
 {
-    public class QuestionType
+    public class QuestionTypeDTO
     {
-        [JsonProperty(PropertyName = "id")]
-        public string Id { get; set; }
+        [JsonProperty(PropertyName = "Id")]
+        public int Id { get; set; }
         public string ParagraphQuestion { get; set; }
         public bool YesNo { get; set; }
         public string DropDown { get; set; }
