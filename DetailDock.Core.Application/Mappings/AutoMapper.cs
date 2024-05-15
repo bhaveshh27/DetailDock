@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using DetailDock.Core.Application.Features.Program.Command;
 using DetailDock.Core.Application.Features.Program.DTO;
+using DetailDock.Core.Application.Features.QuestionType.Command;
+using DetailDock.Core.Application.Features.QuestionType.DTO;
 using DetailDock.Core.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -18,7 +20,9 @@ namespace DetailDock.Core.Application.Mappings
             CreateMap<CreateProgramCommand, ProgramDTO>().ReverseMap();
             CreateMap<UpdateProgramCommand, ProgramDTO>().ReverseMap();
             CreateMap<ProgramDTO, Program>().ReverseMap();
-           
+            CreateMap<CreateQuestionTypeCommand, QuestionType>().ReverseMap();
+            CreateMap<UpdateQuestionTypeCommand, QuestionType>().ReverseMap();
+            CreateMap<QuestionTypeDTO, QuestionType>().ReverseMap();
         }
 
     }
