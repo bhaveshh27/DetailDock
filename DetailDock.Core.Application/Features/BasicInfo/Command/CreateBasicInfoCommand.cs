@@ -1,16 +1,16 @@
-﻿using Newtonsoft.Json;
+﻿using DetailDock.Core.Application.Response;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DetailDock.Core.Domain.Entities
+namespace DetailDock.Core.Application.Features.BasicInfo.Command
 {
-    public class BasicInfo
+    public class CreateBasicInfoCommand : IRequest<IResponse>
     {
-        [JsonProperty(PropertyName = "id")]
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
