@@ -27,7 +27,7 @@ namespace DetailDock.Infrastructure.DatabaseContext
 
 
             /*modelBuilder.Entity<BasicInfo>()
-                .ToContainer("PersonalInformation")
+                .ToContainer("BasicInfo")
                 .HasPartitionKey(c => c.Id);
 
 

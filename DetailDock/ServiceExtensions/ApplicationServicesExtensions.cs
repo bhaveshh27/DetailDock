@@ -1,4 +1,7 @@
-﻿using DetailDock.Core.Application.Features.Program.Command;
+﻿using DetailDock.Core.Application.Features.BasicInfo.Command;
+using DetailDock.Core.Application.Features.BasicInfo.Handler;
+using DetailDock.Core.Application.Features.BasicInfo.Query;
+using DetailDock.Core.Application.Features.Program.Command;
 using DetailDock.Core.Application.Features.Program.Handler;
 using DetailDock.Core.Application.Features.Program.Query;
 using DetailDock.Core.Application.Features.QuestionType.Command;
@@ -18,6 +21,7 @@ namespace DetailDock.ServiceExtensions
             service.TransientServicesRegister();
             service.ProgramServiceRegister();
             service.QuestionTypeServiceRegister();
+            service.BasicInfoServiceRegister();
         }
 
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
@@ -29,6 +33,7 @@ namespace DetailDock.ServiceExtensions
         {
             services.AddTransient<IProgramRepository, ProgramRepository>();
             services.AddTransient<IQuestionTypeRepository, QuestionTypeRepository>();
+            services.AddTransient<IBasicInfoRepository, BasicInfoRepository>();
         }
 
         public static void ProgramServiceRegister(this IServiceCollection services)
@@ -46,6 +51,15 @@ namespace DetailDock.ServiceExtensions
             services.AddTransient<IRequestHandler<GetAllQuestionTypesQuery, IResponse>, GetAllQuestionTypesQueryHandler>();
             services.AddTransient<IRequestHandler<GetQuestionTypeByIdQuery, IResponse>, GetQuestionTypeByIdQueryHandler>();
             services.AddTransient<IRequestHandler<DeleteQuestionTypeCommand, IResponse>, DeleteQuestionTypeCommandHandler>();
+        }
+        public static void BasicInfoServiceRegister(this IServiceCollection services)
+        {
+            services.AddTransient<IRequestHandler<CreateBasicInfoCommand, IResponse>, CreateBasicInfoCommandHandler>();
+            services.AddTransient<IRequestHandler<UpdateBasicInfoCommand, IResponse>, UpdateBasicInfoCommandHandler>();
+            services.AddTransient<IRequestHandler<GetAllBasicInfoQuery, IResponse>, GetAllBasicInfoQueryHandler>();
+            services.AddTransient<IRequestHandler<GetBasicInfoByIdQuery, IResponse>, GetBasicInfoByIdQueryHandler>();
+            services.AddTransient<IRequestHandler<DeleteBasicInfoCommand, IResponse>, DeleteBasicInfoCommandHandler>();
+
         }
 
 

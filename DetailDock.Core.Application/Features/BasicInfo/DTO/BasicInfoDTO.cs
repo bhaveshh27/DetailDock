@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DetailDock.Core.Domain.Entities
+namespace DetailDock.Core.Application.Features.BasicInfo.DTO
 {
-    public class BasicInfo
-    {
-        [JsonProperty(PropertyName = "id")]
-        public string Id { get; set; }
+    public class BasicInfoDTO
+    { 
+        [JsonProperty(PropertyName = "Id")]
+        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
@@ -20,5 +20,6 @@ namespace DetailDock.Core.Domain.Entities
         public string IdNumber { get; set; }
         public string Gender { get; set; }
         public DateTime DOB { get; set; }
+
     }
 }
