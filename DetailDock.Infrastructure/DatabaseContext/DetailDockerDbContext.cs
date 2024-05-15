@@ -16,7 +16,9 @@ namespace DetailDock.Infrastructure.DatabaseContext
         }
         public DbSet<Program> Programs { get; set; }
         public DbSet<BasicInfo> BasicInfo { get; set; }
-        public DbSet<QuestionType> QuestionTypes { get; set; }
+        public DbSet<Question> Questions { get; set; }
+        public DbSet<Response> responses { get; set; }
+        public DbSet<ResponseData> responseDatas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -31,8 +33,8 @@ namespace DetailDock.Infrastructure.DatabaseContext
                 .HasPartitionKey(c => c.Id);
 
 
-            modelBuilder.Entity<QuestionType>()
-                .ToContainer("QuestionType")
+            modelBuilder.Entity<Question>()
+                .ToContainer("Question")
                 .HasPartitionKey(c => c.Id);*/
         }
 
